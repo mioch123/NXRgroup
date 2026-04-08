@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NXR Group tarjoaa ammattitaitoisia kodinkorjaus- ja rakennuspalveluja Suomessa. Huolto, korjaukset, asennukset, remontit ja konsultointi. Ota yhteyttä tänään!" />
+  <meta name="keywords" content="kodinkorjaus, remontointi, huoltopalvelu, asennukset, rakentaminen, Helsinki, Espoo, Vantaa, Suomi" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="NXR Group – Kodinkorjaus ja Remontointi" />
+  <meta property="og:description" content="Luotettava kodinkorjaus- ja remontointipalvelu Suomessa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fi_FI" />
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NXR Group",
+    "description": "Kodinkorjaus ja rakennuspalvelut Suomessa",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FI",
+      "addressLocality": "Helsinki"
+    },
+    "telephone": "+358-XX-XXX-XXXX",
+    "email": "info@nxrgroup.fi",
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "areaServed": "Finland"
+  }
+  </script>
+  <title>NXR Group – Kodinkorjaus ja Remontointipalvelut Suomessa</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#etusivu" class="skip-link">Siirry pääsisältöön</a>
+
+  <!-- =============================================
+       NAVBAR
+  ============================================== -->
+  <header role="banner">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Päänavigaatio">
+      <div class="container navbar__inner">
+
+        <!-- Logo -->
+        <a href="#etusivu" class="navbar__logo" aria-label="NXR Group – etusivu">
+          <img src="logo.png" alt="NXR Group" />
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="navbar__links" role="list">
+          <li><a href="#etusivu">Etusivu</a></li>
+          <li><a href="meista.html">Meistä</a></li>
+          <li class="navbar__has-dropdown">
+            <a href="#palvelut" class="navbar__dropdown-toggle">
+              Palvelut
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="navbar__dropdown-menu" role="menu">
+              <li><a href="timantti-tyot.html" role="menuitem">Timantti työt</a></li>
+              <li><a href="rakentaminen-remontointi.html" role="menuitem">Rakentaminen ja remontointi</a></li>
+              <li><a href="konsultointi.html" role="menuitem">Konsultointi</a></li>
+            </ul>
+          </li>
+          <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+
+        <!-- CTA -->
+        <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="btn btn-primary navbar__cta" aria-label="Ota yhteyttä WhatsAppin kautta">Ota yhteyttä</a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="navbar__hamburger" id="hamburger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="navbar__mobile" id="mobile-menu" role="menu" aria-label="Mobiilinavigaatio">
+        <div class="container">
+          <a href="#etusivu" role="menuitem">Etusivu</a>
+          <a href="meista.html" role="menuitem">Meistä</a>
+          <a href="#palvelut" role="menuitem">Palvelut</a>
+          <a href="timantti-tyot.html" role="menuitem" class="navbar__mobile-subitem">Timantti työt</a>
+          <a href="rakentaminen-remontointi.html" role="menuitem" class="navbar__mobile-subitem">Rakentaminen ja remontointi</a>
+          <a href="konsultointi.html" role="menuitem" class="navbar__mobile-subitem">Konsultointi</a>
+          <a href="yhteystiedot.html" role="menuitem">Yhteystiedot</a>
+          <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="btn btn-primary" role="menuitem" aria-label="Ota yhteyttä WhatsAppin kautta">Ota yhteyttä</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =============================================
+         AURORA INTRO SCREEN
+    ============================================== -->
+    <section id="intro" class="intro-screen" aria-label="NXR Group">
+      <!-- Aurora blobs -->
+      <div class="aurora__blob aurora__blob--1" aria-hidden="true"></div>
+      <div class="aurora__blob aurora__blob--2" aria-hidden="true"></div>
+      <div class="aurora__blob aurora__blob--3" aria-hidden="true"></div>
+      <div class="aurora__blob aurora__blob--4" aria-hidden="true"></div>
+
+      <!-- Logo -->
+      <div class="intro__content">
+        <img src="logo.png" alt="NXR Group" class="intro__logo" />
+      </div>
+
+      <!-- Scroll cue -->
+      <a href="#etusivu" class="intro__scroll" aria-label="Vieritä alas">
+        <span>Vieritä alas</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- =============================================
+         HERO SECTION
+    ============================================== -->
+    <section id="etusivu" class="hero" aria-label="Aloitussivu">
+
+      <!-- Left: Content -->
+      <div class="hero__left">
+
+        <!-- Brand -->
+        <div class="hero__brand">
+          <img src="logo.png" alt="NXR Group" />
+          <div>
+            <p class="hero__brand-name">NXR Group</p>
+            <p class="hero__brand-slogan">Kodinkorjaus ja rakentaminen</p>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="hero__main">
+          <h1 class="hero__title">
+            Kodin huolto–<br>
+            <span>luotettavasti</span><br>
+            ja ammattitaidolla.
+          </h1>
+          <div class="hero__rule" aria-hidden="true"></div>
+          <p class="hero__subtitle">
+            Tarjoamme kattavat kotipalvelut remonteista asennuksiin ja konsultointiin.
+            Yksi yhteydenotto riittää – me hoidamme loput.
+          </p>
+          <a href="#palvelut" class="hero__cta">Tutustu palveluihin</a>
+        </div>
+
+        <!-- Contact footer -->
+        <footer class="hero__footer">
+          <div class="hero__contact">
+            <div class="hero__contact-item">
+              <svg class="hero__contact-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" x2="22" y1="12" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>nxrgroup.fi</span>
+            </div>
+            <div class="hero__contact-item">
+              <svg class="hero__contact-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+358 40 482 9140</span>
+            </div>
+            <div class="hero__contact-item">
+              <svg class="hero__contact-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Helsinki, Suomi</span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+
+      <!-- Right: Image with clip-path reveal -->
+      <div
+        class="hero__image"
+        role="img"
+        aria-label="Ammattilainen tekee kodinkorjausta"
+        style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&auto=format&fit=crop&q=80');"
+      ></div>
+
+    </section>
+
+    <!-- =============================================
+         ABOUT SECTION — Meistä
+    ============================================== -->
+    <section id="meista" class="section section--bg" aria-label="Tietoa meistä">
+      <div class="container">
+        <div class="about__grid">
+
+          <!-- Text column -->
+          <div class="reveal">
+            <span class="section-label">Meistä</span>
+            <h2 class="about__title">Kokemusta, ammattitaitoa ja aitoa välittämistä</h2>
+            <p class="about__body">
+              NXR Group on perustettu tarjoamaan kokonaisvaltaista apua kodin kunnossapitoon
+              ja kehittämiseen. Meidän tiimimme koostuu kokeneista ammattilaisista, jotka
+              ymmärtävät asiakkaan tarpeet ja toimittavat laadukasta työtä – ajallaan ja
+              sovitulla hinnalla.
+            </p>
+
+            <a href="meista.html" class="btn btn-amber-outline" style="margin-bottom: 2rem; margin-top: 0.5rem;">
+              Lue lisää
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <!-- Stats -->
+            <div class="about__stats">
+              <div>
+                <span class="stat__number">5+</span>
+                <span class="stat__label">Vuotta kokemusta</span>
+              </div>
+              <div>
+                <span class="stat__number">100+</span>
+                <span class="stat__label">Tyytyväistä asiakasta</span>
+              </div>
+              <div>
+                <span class="stat__number">100%</span>
+                <span class="stat__label">Tyytyväisyystakuu</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image column -->
+          <div class="about__image reveal reveal-delay-2">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80"
+              alt="NXR Groupin ammattilainen tekee remontointia"
+              loading="lazy"
+            />
+            <div class="about__image-badge">
+              <span class="badge-num">★ 5.0</span>
+              <span class="badge-text">Asiakasarvio</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SERVICES SECTION — Palvelut
+    ============================================== -->
+    <section id="palvelut" class="section section--white" aria-label="Palvelumme">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">PALVELUT</span>
+          <h2>Ammattitaitoiset palvelut yhdestä paikasta</h2>
+          <p>Tarjoamme timanttityöt, rakentamisen ja remontoinnin sekä konsultoinnin – laadukkaasti ja sovitussa aikataulussa.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <!-- Card 1: Timantti työt -->
+          <article class="service-card reveal" aria-label="Timantti työt">
+            <img
+              class="service-card__img"
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80"
+              alt="Timanttityö käynnissä"
+              loading="lazy"
+            />
+            <div class="service-card__body">
+              <h3 class="service-card__title">Timantti työt</h3>
+              <p class="service-card__desc">
+                Ammattitaitoiset timantti- ja purkutyöt uudisrakentamiseen ja saneerauskohteisiin – tarkasti ja turvallisesti.
+              </p>
+              <a href="timantti-tyot.html" class="service-card__link">
+                Lue lisää
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Rakentaminen ja remontointi -->
+          <article class="service-card reveal reveal-delay-1" aria-label="Rakentaminen ja remontointi">
+            <img
+              class="service-card__img"
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&auto=format&fit=crop&q=80"
+              alt="Rakentaminen ja remontointi"
+              loading="lazy"
+            />
+            <div class="service-card__body">
+              <h3 class="service-card__title">Rakentaminen ja remontointi</h3>
+              <p class="service-card__desc">
+                Monipuoliset rakennus- ja remontointipalvelut suunnittelusta viimeistelyyn – laadukkaasti ja aikataulussa.
+              </p>
+              <a href="rakentaminen-remontointi.html" class="service-card__link">
+                Lue lisää
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Konsultointi -->
+          <article class="service-card reveal reveal-delay-2" aria-label="Konsultointi">
+            <img
+              class="service-card__img"
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80"
+              alt="Konsultointi ja asiantuntijaneuvonta"
+              loading="lazy"
+            />
+            <div class="service-card__body">
+              <h3 class="service-card__title">Konsultointi</h3>
+              <p class="service-card__desc">
+                Epäselvä tilanne tai isompi projekti suunnitteilla? Autamme kartoittamaan tarpeet,
+                suunnittelemaan työn ja arvioimaan kustannukset.
+              </p>
+              <a href="konsultointi.html" class="service-card__link">
+                Lue lisää
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         TESTIMONIALS SECTION — Kokemukset
+    ============================================== -->
+    <section id="kokemukset" class="section section--bg" aria-label="Asiakkaiden kokemukset">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">Asiakkaiden kokemukset</span>
+          <h2>Mitä asiakkaamme sanovat?</h2>
+          <p>Tyytyväiset asiakkaat ovat työmme paras mittari.</p>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card reveal" aria-label="Marja L:n arvostelu">
+            <div class="testimonial-card__stars" aria-label="5 tähteä viidestä">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">
+              Erittäin luotettava ja ammattitaitoinen palvelu. Kaikki sovitut työt tehtiin
+              ajallaan ja laadukkaasti. Suosittelen lämpimästi.
+            </p>
+            <div class="testimonial-card__divider"></div>
+            <div class="testimonial-card__author">
+              <p class="testimonial-card__name">Marja L.</p>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card reveal reveal-delay-1" aria-label="Timo K:n arvostelu">
+            <div class="testimonial-card__stars" aria-label="5 tähteä viidestä">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">
+              Keittiöremontti sujui täydellisesti. Selkeä kommunikaatio ja lopputulos ylitti
+              odotukset. Kiitos NXR Group!
+            </p>
+            <div class="testimonial-card__divider"></div>
+            <div class="testimonial-card__author">
+              <p class="testimonial-card__name">Timo K.</p>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card reveal reveal-delay-2" aria-label="Anna S:n arvostelu">
+            <div class="testimonial-card__stars" aria-label="5 tähteä viidestä">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">
+              Poraus- ja asennustyöt hoituvat nopeasti. Hinnoittelu oli läpinäkyvää eikä
+              yllätyksiä tullut. Käytän jatkossakin.
+            </p>
+            <div class="testimonial-card__divider"></div>
+            <div class="testimonial-card__author">
+              <p class="testimonial-card__name">Anna S.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         CONTACT SECTION — Yhteystiedot
+    ============================================== -->
+    <section id="yhteystiedot" class="section section--contact-light" aria-label="Ota yhteyttä">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">Ota yhteyttä</span>
+          <h2>Kuinka voimme auttaa sinua?</h2>
+          <p>Täytä lomake tai ota yhteyttä suoraan. Vastaamme kaikkiin yhteydenottoihin 24 tunnin kuluessa.</p>
+        </div>
+
+        <div class="contact__grid">
+
+          <!-- Contact Form -->
+          <div class="contact__form-wrap reveal">
+            <form id="contact-form" novalidate aria-label="Yhteydenottolomake">
+
+              <div class="form-group" id="group-nimi">
+                <label for="nimi">Nimi <span aria-hidden="true">*</span></label>
+                <input type="text" id="nimi" name="nimi" placeholder="Etunimi Sukunimi" autocomplete="name" aria-required="true" />
+                <span class="form-error" id="error-nimi" role="alert">Kirjoita nimesi.</span>
+              </div>
+
+              <div class="form-group" id="group-puhelin">
+                <label for="puhelin">Puhelinnumero <span aria-hidden="true">*</span></label>
+                <input type="tel" id="puhelin" name="puhelin" placeholder="+358 XX XXX XXXX" autocomplete="tel" aria-required="true" />
+                <span class="form-error" id="error-puhelin" role="alert">Kirjoita puhelinnumerosi.</span>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="email">Sähköposti <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="sinä@esimerkki.fi" autocomplete="email" aria-required="true" />
+                <span class="form-error" id="error-email" role="alert">Kirjoita kelvollinen sähköpostiosoite.</span>
+              </div>
+
+              <div class="form-group" id="group-palvelu">
+                <label for="palvelu">Palvelu</label>
+                <select id="palvelu" name="palvelu" aria-label="Valitse palvelu">
+                  <option value="">Valitse palvelu...</option>
+                  <option value="huolto">Kodin huolto ja korjaukset</option>
+                  <option value="poraukset">Poraukset ja asennukset</option>
+                  <option value="vaihdot">Vaihdot ja korjaukset</option>
+                  <option value="rakentaminen">Rakentaminen ja pieniremontit</option>
+                  <option value="konsultointi">Konsultointi</option>
+                  <option value="muu">Muu</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="group-viesti">
+                <label for="viesti">Viesti <span aria-hidden="true">*</span></label>
+                <textarea id="viesti" name="viesti" rows="4" placeholder="Kerro meille tarpeistasi..." aria-required="true"></textarea>
+                <span class="form-error" id="error-viesti" role="alert">Kirjoita viestisi.</span>
+              </div>
+
+              <div class="form-group form-group--checkbox" id="group-gdpr">
+                <input type="checkbox" id="gdpr" name="gdpr" aria-required="true" />
+                <label for="gdpr">
+                  Hyväksyn tietojeni käsittelyn yhteydenottoa varten.
+                  <a href="#" aria-label="Avaa tietosuojaseloste">Lue tietosuojaselosteemme.</a>
+                </label>
+              </div>
+              <span class="form-error" id="error-gdpr" role="alert" style="display:none; margin-top:-0.75rem; margin-bottom:0.75rem;">Hyväksy tietosuojaseloste jatkaaksesi.</span>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:0.875rem 2rem;">
+                Lähetä viesti
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+              </button>
+
+              <div class="form-success" id="form-success" role="status" aria-live="polite">
+                ✓ Kiitos yhteydenotostasi! Otamme sinuun yhteyttä pian.
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Contact Info Panel -->
+          <div class="contact__info reveal reveal-delay-2">
+            <p class="contact__info-title">Yhteystiedot</p>
+
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/358404829140" target="_blank" rel="noopener" class="contact__whatsapp-btn" aria-label="Ota yhteyttä WhatsAppissa">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="22" height="22">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+              </svg>
+              Ota yhteyttä WhatsAppissa
+            </a>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div class="contact__info-text">
+                <p class="label">Sähköposti</p>
+                <p class="value"><a href="mailto:info@nxr-group.com" style="color:inherit;">info@nxr-group.com</a></p>
+                <p class="value contact__ytunnus">Y-tunnus: 3598643-9</p>
+              </div>
+            </div>
+
+            <div class="contact__info-divider"></div>
+
+            <div class="contact__info-logo">
+              <img src="logo.png" alt="NXR Group" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       FOOTER
+  ============================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Col 1: Logo -->
+        <div class="footer__logo-col">
+          <a href="#etusivu" class="footer__logo" aria-label="NXR Group – etusivu">
+            <img src="logo.png" alt="NXR Group" />
+          </a>
+        </div>
+
+        <!-- Col 2: Quick links -->
+        <div>
+          <p class="footer__col-title">Pikavalikko</p>
+          <ul class="footer__nav-links" role="list">
+            <li><a href="#etusivu">Etusivu</a></li>
+            <li><a href="meista.html">Meistä</a></li>
+            <li><a href="#palvelut">Palvelut</a></li>
+            <li><a href="#kokemukset">Asiakkaiden kokemukset</a></li>
+            <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact -->
+        <div>
+          <p class="footer__col-title">Yhteystiedot</p>
+          <div class="footer__contact-info">
+            <div class="footer__contact-item">
+              <a href="https://wa.me/358404829140" target="_blank" rel="noopener" class="footer__whatsapp-btn" aria-label="Ota yhteyttä WhatsAppissa">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="17" height="17">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+                Ota yhteyttä
+              </a>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <a href="mailto:info@nxr-group.com">info@nxr-group.com</a>
+            </div>
+            <div class="footer__contact-item">
+              <span style="color:rgba(255,255,255,0.4); font-size:0.8rem;">Y-tunnus: 3598643-9</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <span>© 2025 NXR Group. Kaikki oikeudet pidätetään.</span>
+        <a href="#">Tietosuojaseloste</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
