@@ -421,12 +421,13 @@ h1, h2, h3, h4 {
 }
 /* Mobile sub-items */
 .navbar__mobile-subitem {
-  padding-left: 2.25rem !important;
+  padding-left: 1.5rem !important;
   font-size: 0.875rem !important;
   color: var(--text-secondary);
   border-left: 2px solid var(--amber);
   margin-left: clamp(1rem, 4vw, 2rem);
-  padding-right: clamp(1rem, 4vw, 2rem) !important;
+  margin-right: clamp(1rem, 4vw, 2rem);
+  padding-right: 0 !important;
 }
 
 /* Hamburger */
@@ -464,7 +465,8 @@ h1, h2, h3, h4 {
   transition: max-height 0.35s ease, padding 0.35s ease;
 }
 .navbar__mobile.open {
-  max-height: 400px;
+  max-height: calc(100dvh - 68px);
+  overflow-y: auto;
   padding: 1.25rem 0;
 }
 .navbar__mobile a {
@@ -477,7 +479,11 @@ h1, h2, h3, h4 {
   transition: color var(--transition), background var(--transition);
 }
 .navbar__mobile a:hover { color: var(--navy); background: var(--bg); }
-.navbar__mobile .btn { margin: 0.5rem clamp(1rem, 4vw, 2rem); }
+.navbar__mobile .btn {
+  margin: 0.75rem clamp(1rem, 4vw, 2rem);
+  display: flex;
+  justify-content: center;
+}
 
 /* ============================================
    HERO SECTION
@@ -579,6 +585,13 @@ h1, h2, h3, h4 {
   margin-bottom: 2rem;
 }
 
+.hero__cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
 .hero__cta {
   display: inline-block;
   font-size: 0.78rem;
@@ -590,6 +603,11 @@ h1, h2, h3, h4 {
 }
 
 .hero__cta:hover { opacity: 0.7; }
+
+.hero__cta-btn {
+  font-size: 0.88rem;
+  padding: 0.65rem 1.5rem;
+}
 
 /* Contact footer */
 .hero__footer {
@@ -1253,7 +1271,7 @@ h1, h2, h3, h4 {
 .hero__title   { animation: fadeInUp 0.6s ease 0.35s both; }
 .hero__rule    { animation: fadeInUp 0.6s ease 0.5s both; }
 .hero__subtitle { animation: fadeInUp 0.6s ease 0.6s both; }
-.hero__cta     { animation: fadeInUp 0.6s ease 0.75s both; }
+.hero__cta-group { animation: fadeInUp 0.6s ease 0.75s both; }
 .hero__footer  { animation: fadeInUp 0.6s ease 0.9s both; }
 
 /* ============================================
@@ -1296,13 +1314,16 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Mobile: 640px */
-@media (max-width: 640px) {
+/* Mobile: 768px */
+@media (max-width: 768px) {
   .navbar__links,
   .navbar__cta { display: none; }
   .navbar__hamburger { display: flex; }
   .navbar__mobile { display: flex; }
+}
 
+/* Mobile: 640px */
+@media (max-width: 640px) {
   .about__stats { grid-template-columns: 1fr; gap: 1rem; }
 
   .services__grid {
