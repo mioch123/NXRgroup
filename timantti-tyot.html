@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NXR Group tarjoaa ammattitaitoiset timantti- ja purkutyöt uudisrakentamiseen ja saneerauskohteisiin. Nykyaikainen kalusto ja kokenut henkilöstö." />
+  <title>Timantti työt – NXR Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 8rem 0 5rem;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(17,29,51,0.82) 0%, rgba(17,29,51,0.68) 100%);
+    }
+    .page-hero .container { position: relative; z-index: 1; }
+    .page-hero__label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber-light);
+      margin-bottom: 1rem;
+    }
+    .page-hero__label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--amber);
+      border-radius: 2px;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      max-width: 700px;
+      margin: 0 auto 1.25rem;
+      line-height: 1.15;
+    }
+    .page-hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+      padding-top: 1rem;
+    }
+    .breadcrumb a { color: var(--amber); transition: color 200ms ease; }
+    .breadcrumb a:hover { color: var(--amber-dark); }
+    .breadcrumb span { color: var(--border); }
+    .service-page__intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .service-page__intro img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+    }
+    .service-page__body h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+    .service-page__body p {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .includes__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 5rem;
+    }
+    .include-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: box-shadow 200ms ease, transform 200ms ease;
+    }
+    .include-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .include-card__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(196,168,130,0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber);
+      margin-bottom: 1rem;
+    }
+    .include-card__icon svg { width: 24px; height: 24px; }
+    .include-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .include-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .cta-strip {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 2rem 3rem;
+      text-align: center;
+      border: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .cta-strip__buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 900px) {
+      .service-page__intro { grid-template-columns: 1fr; gap: 2rem; }
+      .service-page__intro img { height: 300px; }
+      .includes__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .includes__grid { grid-template-columns: 1fr; }
+      .cta-strip { padding: 2rem 1.5rem; }
+      .cta-strip__buttons { flex-direction: column; align-items: center; }
+      .navbar__links, .navbar__cta { display: none; }
+      .navbar__hamburger { display: flex; }
+      .navbar__mobile { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#sisalto" class="skip-link">Siirry pääsisältöön</a>
+
+  <!-- NAVBAR -->
+  <header role="banner">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Päänavigaatio">
+      <div class="container navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="NXR Group – etusivu">
+          <img src="logo.png" alt="NXR Group" />
+        </a>
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html#etusivu">Etusivu</a></li>
+          <li><a href="meista.html">Meistä</a></li>
+          <li class="navbar__has-dropdown">
+            <a href="index.html#palvelut" class="navbar__dropdown-toggle active">
+              Palvelut
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="navbar__dropdown-menu" role="menu">
+              <li><a href="timantti-tyot.html" role="menuitem" class="active">Timantti työt</a></li>
+              <li><a href="rakentaminen-remontointi.html" role="menuitem">Rakentaminen ja remontointi</a></li>
+              <li><a href="konsultointi.html" role="menuitem">Konsultointi</a></li>
+            </ul>
+          </li>
+          <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+        <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="btn btn-primary navbar__cta" aria-label="Ota yhteyttä WhatsAppin kautta">Ota yhteyttä</a>
+        <button class="navbar__hamburger" id="hamburger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="navbar__mobile" id="mobile-menu" role="menu" aria-label="Mobiilinavigaatio">
+        <div class="container">
+          <a href="index.html#etusivu" role="menuitem">Etusivu</a>
+          <a href="meista.html" role="menuitem">Meistä</a>
+          <a href="index.html#palvelut" role="menuitem">Palvelut</a>
+          <a href="timantti-tyot.html" role="menuitem" class="navbar__mobile-subitem">Timantti työt</a>
+          <a href="rakentaminen-remontointi.html" role="menuitem" class="navbar__mobile-subitem">Rakentaminen ja remontointi</a>
+          <a href="konsultointi.html" role="menuitem" class="navbar__mobile-subitem">Konsultointi</a>
+          <a href="yhteystiedot.html" role="menuitem">Yhteystiedot</a>
+          <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="btn btn-primary" role="menuitem">Ota yhteyttä</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Timantti työt">
+    <div class="container">
+      <div class="page-hero__label">Palvelut</div>
+      <h1>Timantti työt</h1>
+      <p>Ammattitaitoiset timantti- ja purkutyöt uudisrakentamiseen ja saneerauskohteisiin – tarkasti, turvallisesti ja sovitussa aikataulussa.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="sisalto">
+    <div class="section section--bg">
+      <div class="container">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Sivupolku">
+          <a href="index.html">Etusivu</a>
+          <span>›</span>
+          <a href="index.html#palvelut">Palvelut</a>
+          <span>›</span>
+          <span aria-current="page">Timantti työt</span>
+        </nav>
+
+        <!-- Intro -->
+        <div class="service-page__intro reveal">
+          <div class="service-page__body">
+            <h2>Mitä palvelu sisältää</h2>
+            <p>
+              Tarjoamme ammattitaitoiset timantti- ja purkutyöt niin uudisrakentamiseen
+              kuin saneerauskohteisiin. Toimimme luotettavana kumppanina yrityksille ja
+              yksityisasiakkaille, ja toteutamme työt aina tarkasti, turvallisesti ja
+              sovitussa aikataulussa.
+            </p>
+            <p>
+              Käytössämme on nykyaikainen kalusto ja kokenut henkilöstö, joiden avulla
+              varmistamme siistin ja mittatarkan lopputuloksen kaikissa kohteissa. Oli
+              kyseessä pieni remontti tai laajempi urakka, hoidamme työn tehokkaasti
+              alusta loppuun.
+            </p>
+            <p>
+              Toimintamme perustuu laatuun, rehellisyyteen ja asiakaslähtöiseen palveluun.
+              Tavoitteenamme on aina ylittää asiakkaan odotukset ja tarjota kestävät
+              ratkaisut kaikkiin betonin ja kivirakenteiden käsittelytarpeisiin.
+            </p>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80"
+            alt="Timanttityö käynnissä"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- What's included -->
+        <div class="section-header reveal" style="margin-bottom: 2.5rem;">
+          <span class="section-label">Sisältää muun muassa</span>
+          <h2>Mitä timanttityöt kattavat</h2>
+          <p>Tarkkuutta ja ammattitaitoa vaativiin betonin ja kivirakenteiden töihin.</p>
+        </div>
+
+        <div class="includes__grid">
+          <div class="include-card reveal">
+            <div class="include-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            </div>
+            <h3>Timanttisahaus</h3>
+            <p>Betonin, tiilin ja muiden kovien materiaalien sahaus mittatarkasti – nykyaikaisella kalustolla, vähäisellä pölyllä ja tärinällä niin uudisrakentamisessa kuin saneerauksessa.</p>
+          </div>
+          <div class="include-card reveal reveal-delay-1">
+            <div class="include-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3>Timanttiporaus</h3>
+            <p>Reiät betoniin ja kivirakenteisiin tarkasti ja siististi – läpivienneille, putkille, kaapeleille ja ilmanvaihdolle sekä pienissä että laajoissa urakoissa.</p>
+          </div>
+          <div class="include-card reveal reveal-delay-2">
+            <div class="include-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+            </div>
+            <h3>Purkutyöt</h3>
+            <p>Hallittu rakenteiden purku vanhoissa ja uusissa kohteissa – työturvallisuus, jätteen lajittelu ja siisti lopputulos huomioiden alusta loppuun.</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-strip reveal">
+          <div class="cta-strip__buttons">
+            <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Ota yhteyttä WhatsAppin kautta">
+              Ota yhteyttä WhatsAppissa
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="index.html#palvelut" class="btn btn-amber-outline">Takaisin palveluihin</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__logo-col">
+          <a href="index.html" class="footer__logo" aria-label="NXR Group – etusivu">
+            <img src="logo.png" alt="NXR Group" />
+          </a>
+        </div>
+        <div>
+          <p class="footer__col-title">Pikavalikko</p>
+          <ul class="footer__nav-links" role="list">
+            <li><a href="index.html#etusivu">Etusivu</a></li>
+            <li><a href="meista.html">Meistä</a></li>
+            <li><a href="index.html#palvelut">Palvelut</a></li>
+            <li><a href="index.html#yhteystiedot">Yhteystiedot</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Yhteystiedot</p>
+          <div class="footer__contact-info">
+            <div class="footer__contact-item">
+              <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="footer__whatsapp-btn" aria-label="Ota yhteyttä WhatsAppin kautta">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.997l6.305-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.182-1.433l-.371-.221-3.844 1.008 1.026-3.744-.242-.384A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                Ota yhteyttä
+              </a>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:info@nxr-group.com">info@nxr-group.com</a>
+            </div>
+            <div class="footer__contact-item">
+              <span style="color:rgba(255,255,255,0.4); font-size:0.8rem;">Y-tunnus: 3598643-9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 NXR Group. Kaikki oikeudet pidätetään.</span>
+        <a href="#">Tietosuojaseloste</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

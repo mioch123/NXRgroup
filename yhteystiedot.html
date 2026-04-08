@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ota yhteyttä NXR Groupiin – täytä lomake tai ota suoraan yhteyttä tiimiimme. Vastaamme kaikkiin yhteydenottoihin 24 tunnin kuluessa." />
+  <title>Yhteystiedot – NXR Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page hero */
+    .page-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3460 60%, #243d73 100%);
+      padding: 7rem 0 4.5rem;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(212,136,46,0.12) 0%, transparent 65%);
+    }
+    .page-hero .container { position: relative; z-index: 1; }
+    .page-hero__label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber-light);
+      margin-bottom: 1rem;
+    }
+    .page-hero__label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--amber);
+      border-radius: 2px;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      max-width: 700px;
+      margin: 0 auto 1.25rem;
+      line-height: 1.15;
+    }
+    .page-hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Team section */
+    .team-section {
+      padding: 5rem 0 4rem;
+      background: var(--bg);
+    }
+    .team__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    .team-card {
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.25rem 1.75rem 2rem;
+      transition: box-shadow 200ms ease, transform 200ms ease;
+    }
+    .team-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .team-card__avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy) 0%, #2d4a7a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fff;
+      font-family: var(--font-heading);
+      border: 3px solid var(--amber);
+      box-shadow: 0 0 0 6px rgba(212,136,46,0.1);
+    }
+    .team-card__name {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.3rem;
+    }
+    .team-card__role {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.1rem;
+    }
+    .team-card__phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 200ms ease;
+    }
+    .team-card__phone:hover { color: var(--navy); }
+    .team-card__phone svg { flex-shrink: 0; }
+
+    /* Contact section */
+    .contact-page-section {
+      padding: 5rem 0 6rem;
+    }
+
+    @media (max-width: 640px) {
+      .team__grid { grid-template-columns: 1fr; max-width: 320px; }
+      .navbar__links, .navbar__cta { display: none; }
+      .navbar__hamburger { display: flex; }
+      .navbar__mobile { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#sisalto" class="skip-link">Siirry pääsisältöön</a>
+
+  <!-- NAVBAR -->
+  <header role="banner">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Päänavigaatio">
+      <div class="container navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="NXR Group – etusivu">
+          <img src="logo.png" alt="NXR Group" />
+        </a>
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html#etusivu">Etusivu</a></li>
+          <li><a href="meista.html">Meistä</a></li>
+          <li class="navbar__has-dropdown">
+            <a href="index.html#palvelut" class="navbar__dropdown-toggle">
+              Palvelut
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="navbar__dropdown-menu" role="menu">
+              <li><a href="timantti-tyot.html" role="menuitem">Timantti työt</a></li>
+              <li><a href="rakentaminen-remontointi.html" role="menuitem">Rakentaminen ja remontointi</a></li>
+              <li><a href="konsultointi.html" role="menuitem">Konsultointi</a></li>
+            </ul>
+          </li>
+          <li><a href="yhteystiedot.html" class="active">Yhteystiedot</a></li>
+        </ul>
+        <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="btn btn-primary navbar__cta" aria-label="Ota yhteyttä WhatsAppin kautta">Ota yhteyttä</a>
+        <button class="navbar__hamburger" id="hamburger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="navbar__mobile" id="mobile-menu" role="menu" aria-label="Mobiilinavigaatio">
+        <div class="container">
+          <a href="index.html#etusivu" role="menuitem">Etusivu</a>
+          <a href="meista.html" role="menuitem">Meistä</a>
+          <a href="index.html#palvelut" role="menuitem">Palvelut</a>
+          <a href="timantti-tyot.html" role="menuitem" class="navbar__mobile-subitem">Timantti työt</a>
+          <a href="rakentaminen-remontointi.html" role="menuitem" class="navbar__mobile-subitem">Rakentaminen ja remontointi</a>
+          <a href="konsultointi.html" role="menuitem" class="navbar__mobile-subitem">Konsultointi</a>
+          <a href="yhteystiedot.html" role="menuitem">Yhteystiedot</a>
+          <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="btn btn-primary" role="menuitem">Ota yhteyttä</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Yhteystiedot">
+    <div class="container">
+      <div class="page-hero__label">Ota yhteyttä</div>
+      <h1>Olemme täällä sinua varten</h1>
+      <p>Täytä lomake tai ota yhteyttä suoraan. Vastaamme kaikkiin yhteydenottoihin 24 tunnin kuluessa.</p>
+    </div>
+  </section>
+
+  <main id="sisalto">
+
+    <!-- TEAM SECTION -->
+    <section class="team-section" aria-label="Tiimimme">
+      <div class="container">
+
+        <div class="section-header reveal" style="margin-bottom: 3rem;">
+          <span class="section-label">Tiimimme</span>
+          <h2>Ota suoraan yhteyttä</h2>
+          <p>Meiltä saat aina henkilökohtaista palvelua – suoraan ammattilaiselta.</p>
+        </div>
+
+        <div class="team__grid">
+
+          <div class="team-card reveal">
+            <div class="team-card__avatar" aria-hidden="true">ON</div>
+            <p class="team-card__name">Otto Näsi</p>
+            <p class="team-card__role">Toimitusjohtaja</p>
+            <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="team-card__phone" aria-label="Soita Otto Näsille WhatsAppissa">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.997l6.305-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.182-1.433l-.371-.221-3.844 1.008 1.026-3.744-.242-.384A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              +358 40 482 9140
+            </a>
+          </div>
+
+          <div class="team-card reveal reveal-delay-1">
+            <div class="team-card__avatar" aria-hidden="true">NR</div>
+            <p class="team-card__name">Niko Ristolainen</p>
+            <p class="team-card__role">Puheenjohtaja</p>
+            <a href="https://wa.me/358504397799" target="_blank" rel="noopener noreferrer" class="team-card__phone" aria-label="Soita Niko Ristolaiselle WhatsAppissa">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.997l6.305-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.182-1.433l-.371-.221-3.844 1.008 1.026-3.744-.242-.384A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              +358 50 439 7799
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-page-section section--contact-light" aria-label="Yhteydenottolomake">
+      <div class="container">
+
+        <div class="section-header reveal" style="margin-bottom: 3rem;">
+          <span class="section-label">Lomake</span>
+          <h2>Lähetä meille viesti</h2>
+          <p>Kerro tarpeistasi ja palaamme asiaan mahdollisimman pian.</p>
+        </div>
+
+        <div class="contact__grid">
+
+          <!-- Contact Form -->
+          <div class="contact__form-wrap reveal">
+            <form id="contact-form" novalidate aria-label="Yhteydenottolomake">
+
+              <div class="form-group" id="group-nimi">
+                <label for="nimi">Nimi <span aria-hidden="true">*</span></label>
+                <input type="text" id="nimi" name="nimi" placeholder="Etunimi Sukunimi" autocomplete="name" aria-required="true" />
+                <span class="form-error" id="error-nimi" role="alert">Kirjoita nimesi.</span>
+              </div>
+
+              <div class="form-group" id="group-puhelin">
+                <label for="puhelin">Puhelinnumero <span aria-hidden="true">*</span></label>
+                <input type="tel" id="puhelin" name="puhelin" placeholder="+358 XX XXX XXXX" autocomplete="tel" aria-required="true" />
+                <span class="form-error" id="error-puhelin" role="alert">Kirjoita puhelinnumerosi.</span>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="email">Sähköposti <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="sinä@esimerkki.fi" autocomplete="email" aria-required="true" />
+                <span class="form-error" id="error-email" role="alert">Kirjoita kelvollinen sähköpostiosoite.</span>
+              </div>
+
+              <div class="form-group" id="group-palvelu">
+                <label for="palvelu">Palvelu</label>
+                <select id="palvelu" name="palvelu" aria-label="Valitse palvelu">
+                  <option value="">Valitse palvelu...</option>
+                  <option value="timantti">Timantti työt</option>
+                  <option value="rakentaminen">Rakentaminen ja remontointi</option>
+                  <option value="konsultointi">Konsultointi</option>
+                  <option value="muu">Muu</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="group-viesti">
+                <label for="viesti">Viesti <span aria-hidden="true">*</span></label>
+                <textarea id="viesti" name="viesti" rows="4" placeholder="Kerro meille tarpeistasi..." aria-required="true"></textarea>
+                <span class="form-error" id="error-viesti" role="alert">Kirjoita viestisi.</span>
+              </div>
+
+              <div class="form-group form-group--checkbox" id="group-gdpr">
+                <input type="checkbox" id="gdpr" name="gdpr" aria-required="true" />
+                <label for="gdpr">
+                  Hyväksyn tietojeni käsittelyn yhteydenottoa varten.
+                  <a href="#" aria-label="Avaa tietosuojaseloste">Lue tietosuojaselosteemme.</a>
+                </label>
+              </div>
+              <span class="form-error" id="error-gdpr" role="alert" style="display:none; margin-top:-0.75rem; margin-bottom:0.75rem;">Hyväksy tietosuojaseloste jatkaaksesi.</span>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:0.875rem 2rem;">
+                Lähetä viesti
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+              </button>
+
+              <div class="form-success" id="form-success" role="status" aria-live="polite">
+                ✓ Kiitos yhteydenotostasi! Otamme sinuun yhteyttä pian.
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Contact Info Panel -->
+          <div class="contact__info reveal reveal-delay-2">
+            <p class="contact__info-title">Yhteystiedot</p>
+
+            <a href="https://wa.me/358404829140" target="_blank" rel="noopener" class="contact__whatsapp-btn" aria-label="Ota yhteyttä WhatsAppissa">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="22" height="22">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+              </svg>
+              Ota yhteyttä WhatsAppissa
+            </a>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div class="contact__info-text">
+                <p class="label">Sähköposti</p>
+                <p class="value"><a href="mailto:info@nxr-group.com" style="color:inherit;">info@nxr-group.com</a></p>
+                <p class="value contact__ytunnus">Y-tunnus: 3598643-9</p>
+              </div>
+            </div>
+
+            <div class="contact__info-divider"></div>
+
+            <div class="contact__info-logo">
+              <img src="logo.png" alt="NXR Group" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__logo-col">
+          <a href="index.html" class="footer__logo" aria-label="NXR Group – etusivu">
+            <img src="logo.png" alt="NXR Group" />
+          </a>
+        </div>
+        <div>
+          <p class="footer__col-title">Pikavalikko</p>
+          <ul class="footer__nav-links" role="list">
+            <li><a href="index.html#etusivu">Etusivu</a></li>
+            <li><a href="meista.html">Meistä</a></li>
+            <li><a href="index.html#palvelut">Palvelut</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Yhteystiedot</p>
+          <div class="footer__contact-info">
+            <div class="footer__contact-item">
+              <a href="https://wa.me/358404829140" target="_blank" rel="noopener noreferrer" class="footer__whatsapp-btn" aria-label="Ota yhteyttä WhatsAppin kautta">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.997l6.305-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.182-1.433l-.371-.221-3.844 1.008 1.026-3.744-.242-.384A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                Ota yhteyttä
+              </a>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:info@nxr-group.com">info@nxr-group.com</a>
+            </div>
+            <div class="footer__contact-item">
+              <span style="color:rgba(255,255,255,0.4); font-size:0.8rem;">Y-tunnus: 3598643-9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 NXR Group. Kaikki oikeudet pidätetään.</span>
+        <a href="#">Tietosuojaseloste</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
